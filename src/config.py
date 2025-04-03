@@ -1,5 +1,8 @@
+from dotenv import load_dotenv
+import os
+load_dotenv()
 class Config:
-    API_KEY = '4a225d99df7d676d449cb49b41f8e5c0'
+    API_KEY = os.getenv("OPENWEATHER_API_KEY")
     DEFAULT_CITY = "Warsaw"
     units_options = {
         '1': {'name': 'Celsius (°C)', 'value': 'metric'},
